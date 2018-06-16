@@ -1,33 +1,38 @@
 # Raindrop Detection
 
-https://www.dropbox.com/s/z9b7jh5xebsddlp/Example%20of%20Raindrop%20Detection.png?dl=0
+![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/Example%20of%20Raindrop%20Detection.png)
 
-Detect raindrops on vehicle windscreen by combining various region proposal algorithm with Convolutional Neural Network.
+Detect raindrops on vehicle windscreen by using combination of various region proposal algorithm and Convolutional Neural Network.
+
+#### Usage of directories
 
 **ground_truth_labels**
 
-This directory contains 13 xml files that stores the ground truth raindrop coordinates for associated images in `raindrop_detection_images`.
-Those xml files will be required when highlighting the ground truth raindrops (with red rectangle) when performing raindrop detection for an image.
+This directory contains 13 xml files that store the ground truth raindrop coordinates for associated images in `raindrop_detection_images`.
+Those xml files will be required when highlighting the ground truth raindrops (with red rectangle) during raindrop detection for an image.
 
 
 
 **Model**
 
-This directory should contains 4 files, due to the file size limitation of GitHub, I have put these model files in dropbox. 
+This directory should contains 4 files, due to the file size limitation of GitHub, I have put these model files in [dropbox](https://www.dropbox.com/s/wp6wmn7nmli5e0f/Model.zip?dl=0) 
+to download separately.
+
 `alexRainApr06.tfl`: trained model for AlexNet, required for raindrop detection.
+
 `alexRaindropApr12.tfl` (3 files): trained model for AlexNet, required for raindrop classification.
 
 
 
 **raindrop_classification_images**
 
-This directory contains 16 sample images prepared for raindrop classification.
+This directory contains 16 sample images can be used for raindrop classification.
 
 
 
 **raindrop_detection_images**
 
-This directory contains 13 sample images prepared for raindrop detection.
+This directory contains 13 sample images can be used for raindrop detection.
 
 
 
@@ -47,6 +52,8 @@ python script for raindrop detection based on sliding window algorithm.
 
 python script for raindrop detection based on super pixel algorithm.
 
+
+#### Requirements
 
 **System environment and libraries requirement**
 ```$xslt
