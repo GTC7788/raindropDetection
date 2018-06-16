@@ -1,10 +1,10 @@
-# Raindrop Detection
+# Raindrop Detection by using Convolutional Neural Network
 
 ![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/Example%20of%20Raindrop%20Detection.png)
 
-Detect raindrops on vehicle windscreen by using combination of various region proposal algorithm and Convolutional Neural Network.
+*This project contains the raindrop classification and detection demonstration code (and associated supporting files).*
 
-#### Usage of directories
+### Usage of directories
 
 **ground_truth_labels**
 
@@ -53,7 +53,7 @@ python script for raindrop detection based on sliding window algorithm.
 python script for raindrop detection based on super pixel algorithm.
 
 
-#### Requirements
+### Requirements
 
 **System environment and libraries requirement**
 ```$xslt
