@@ -1,7 +1,7 @@
 # ON THE IMPACT OF VARYING REGION PROPOSAL STRATEGIES FOR RAINDROP DETECTION AND CLASSIFICATION USING CONVOLUTIONAL NEURAL NETWORKS
 
 ![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/Example%20of%20Raindrop%20Detection.png)
-&nbsp;&nbsp;&nbsp;Demonstration of different region proposal algorithm and the respective raindrop detection results
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Demonstration of different region proposal algorithm and the respective raindrop detection results
 ![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/InceptionModelV1.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -62,9 +62,11 @@ python script for raindrop detection based on super pixel algorithm.
 
 ## Example video:
 [![Examples](https://github.com/GTC7788/raindropDetection/blob/master/utils/VideoCoverSlidingWindow.png)](https://youtu.be/ImF6VNtrC5Y)
+
 Video Example for Raindrop Detection with Sliding Window - click image above to play.
 
 [![Examples](https://github.com/GTC7788/raindropDetection/blob/master/utils/VideoCoverSuperPixel.png)](https://youtu.be/iuioJEi6GNE)
+
 Video Example for Raindrop Detection with Super Pixel - click image above to play.
 
 ## Requirements:
