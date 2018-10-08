@@ -4,7 +4,7 @@
 
 # Copyright (c) 2017/18 - Tiancheng Guo / Toby Breckon, Durham University, UK
 
-# License : https://github.com/GTC7788/raindropDetection/LICENSE
+# License : https://github.com/GTC7788/raindropDetection/blob/master/LICENSE
 
 #####################################################################
 
