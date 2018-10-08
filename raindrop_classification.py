@@ -1,21 +1,24 @@
 #####################################################################
 
-# Classify raindrop by using a trained CNN with structure 
-# of classic AlexNet.
+# Example : Classify raindrop by using a AlexNet CNN
 
-# How to run:
- 
-# In command line: "python raindrop_classification.py number_of_image"  
+# Copyright (c) 2017/18 - Tiancheng Guo / Toby Breckon, Durham University, UK
 
+# License : https://github.com/GTC7788/raindropDetection/LICENSE
+
+#####################################################################
+
+# This script takes 1 argument indicating the image to process.
 # e.g. 
 # > python raindrop_classification.py 3 
 # will process image 3 in the raindrop_classification_images folder.  
 
-# This program will output the result in the commandline.
+# This program will print the result in the command line.
 
-# the result is a list of two numbers, the first number 
-# indicates non-raindrop, the seconde number indicates raindrop.
-# e.g. [ not raindrop,  raindrop ]
+# the result is a list of two numbers,
+# the first number indicates the percentage of the object is a non-raindrop object,
+# the second number indicates the percentage of the object is a raindrop.
+# > [ not raindrop,  raindrop ]
 #####################################################################
 
 from __future__ import division, print_function, absolute_import
@@ -33,7 +36,7 @@ from tflearn.layers.merge_ops import merge
 import argparse
 
 
-########################################################################
+#####################################################################
 # Use a command line parser to read command line argument
 # The integer number represents the number of the image to process
 parser = argparse.ArgumentParser()
@@ -46,9 +49,8 @@ number = args.integers[0]
 # number = 6
 
 img_name = 'raindrop_classification_images/%s.jpg' %number
-########################################################################
 
-
+#######################################################################
 
 def load_img(img_path):
 	img = Image.open(img_path)
@@ -83,7 +85,9 @@ Returns:
 	network: a CNN which follows the structure of AlexNet.
 """
 def create_basic_alexnet():
-	# Building 'AlexNet'
+
+	# Building network as per architecture in [Guo/Breckon, 2018]
+
 	network = input_data(shape=[None, 30, 30, 3])
 	network = conv_2d(network, 96, 11, strides=4, activation='relu')
 	network = max_pool_2d(network, 3, strides=2)
@@ -120,14 +124,12 @@ imgs = []
 imgs.append(tensor_image)
 
 
-# *************************************************
 # Set up the trained AlexNet
 alex_net = create_basic_alexnet()
 model = tflearn.DNN(alex_net)
 model.load('Model/alexRainApr12.tfl', weights_only = True)
 
 
-# *************************************************
 # pass the image into AlexNet
 predict_result = model.predict(imgs)
 final_result = np.argmax(predict_result[0]) # return the index of the max number in a list

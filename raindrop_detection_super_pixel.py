@@ -1,16 +1,18 @@
 #####################################################################
 
-# Detect raindrops within an image by using super pixel as region proposal 
-# algorithm and classify the roi by using  a trained CNN with structure 
-# of classic AlexNet.
+# Example : Detect raindrops within an image by using super pixel algorithm
+# and classify the ROI by using AlexNet CNN.
+
+# Copyright (c) 2017/18 - Tiancheng Guo / Toby Breckon, Durham University, UK
+
+# License : https://github.com/GTC7788/raindropDetection/LICENSE
+
+#####################################################################
 
 # The green rectangles represents the detected raindrops.
 # the red rectangles represents the ground truth raindrops in that image.  
 
-# How to run:
- 
-# In command line: "python raindrop_detection_super_pixel.py number_of_image"  
-
+# This script takes 1 argument indicating the image to process.
 # e.g. 
 # > python raindrop_detection_super_pixel.py 3 
 # will process image 3 in the raindrop_detection_images folder and use 
@@ -40,7 +42,6 @@ import argparse
 
 
 ######################################################################
-############# Read Command line parameter ############################
 
 # Use a command line parser to read command line argument
 # The integer number represents the number of the image to process
@@ -51,12 +52,11 @@ args = parser.parse_args()
 
 number = args.integers[0]
 
-# Can mmanually set the number.
+# Manually set the number of image to process.
 # number = 1
 
 
 #######################################################################
-######################## Parameter Set Up #############################
 
 # Image path
 image_path = "raindrop_detection_images/%s.jpg" % number
@@ -97,6 +97,9 @@ Returns:
 	network: a CNN which follows the structure of AlexNet.
 """
 def create_basic_alexnet():
+
+	# Building network as per architecture in [Guo/Breckon, 2018]
+
 	network = input_data(shape=[None, 30, 30, 3])
 	network = conv_2d(network, 64, 11, strides=4, activation='relu')
 	network = max_pool_2d(network, 3, strides=2)
