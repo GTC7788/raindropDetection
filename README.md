@@ -2,7 +2,8 @@
 
 
 ![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/ExampleofRaindropDetection.jpg)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raindrop detection by using different region proposal algorithms
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raindrop detection by using different region proposal algorithms
 
 ![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/InceptionModelV1.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -34,7 +35,7 @@ This repository contains ```raindrop_classification.py```, ```raindrop_detection
 corresponding to raindrop classification based on AlexNet, raindrop detection based on sliding window and superpixel from the paper, these approaches 
 demonstrate the best accuracy as shown in the paper.
 
-To use these scripts, the pre-trained CNN network models must be [downloaded](https://www.dropbox.com/s/wp6wmn7nmli5e0f/Model.zip?dl=0&file_subpath=%2FModel).
+To use these scripts, the pre-trained CNN network models must be [downloaded](https://www.dropbox.com/s/wp6wmn7nmli5e0f/Model.zip?dl=0&file_subpath=%2FModel) and placed in the Model directory in this repository.
 
 Training datasets:
 * The custom dataset used for raindrop classification can be found in [here](https://www.dropbox.com/s/nirra2nem8vopas/dataset_code_video.zip?dl=0&file_subpath=%2Fdataset%2Fraindrop+classification+dataset)
