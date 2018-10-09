@@ -1,7 +1,7 @@
 # ON THE IMPACT OF VARYING REGION PROPOSAL STRATEGIES FOR RAINDROP DETECTION AND CLASSIFICATION USING CONVOLUTIONAL NEURAL NETWORKS
 
 
-![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/ExampleofRaindropDetection.png)
+![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/ExampleofRaindropDetection.jpg)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raindrop detection by using different region proposal algorithms
 
 ![Demonstration of Raindrop Detection](https://github.com/GTC7788/raindropDetection/blob/master/utils/InceptionModelV1.png)
@@ -12,7 +12,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InceptionV1 architecture
 
 
-*(This repo contains the raindrop classification and detection demonstration code (and associated supporting files))*
+*(This repository contains the raindrop classification, detection demonstration code and associated supporting files)*
 
 ## Abstract
 The presence of raindrop induced image distortion has a significant negative impact on the performance of a wide 
@@ -25,7 +25,22 @@ with in-frame raindrop annotation to achieve maximal 0.95 detection accuracy wit
 prior work. Our approach is evaluated under a range of environmental conditions typical of all-weather automotive 
 visual sensing applications.
 
-## Usage of each directory and script in this repo:
+## Reference implementation
+
+This raindrop detection approach was based on various region proposal algorithms to propose regions within an image, and using classify 
+each region by using pre-trained CNN (AlexNet, InceptionV1).
+
+This repository contains ```raindrop_classification.py```, ```raindrop_detection_sliding_window.py``` and ```raindrop_detection_super_pixel.py``` files 
+corresponding to raindrop classification based on AlexNet, raindrop detection based on sliding window and superpixel from the paper, these approaches 
+demonstrate the best accuracy as shown in the paper.
+
+To use these scripts, the pre-trained CNN network models must be [downloaded](https://www.dropbox.com/s/wp6wmn7nmli5e0f/Model.zip?dl=0&file_subpath=%2FModel).
+
+Training datasets:
+* The custom dataset used for raindrop classification can be found in [here](https://www.dropbox.com/s/nirra2nem8vopas/dataset_code_video.zip?dl=0&file_subpath=%2Fdataset%2Fraindrop+classification+dataset)
+* The custom dataset used for raindrop detection can be found in [here](https://www.dropbox.com/s/nirra2nem8vopas/dataset_code_video.zip?dl=0&file_subpath=%2Fdataset%2Fraindrop+detection+dataset)
+
+## Usage of each directory and script in this repository
 
 **Model**
 
@@ -73,15 +88,15 @@ python script for raindrop detection based on sliding window algorithm.
 
 python script for raindrop detection based on super pixel algorithm.
 
-## Instructions to test pre-trained models for raindrop classification and detection:
+## Instructions to test pre-trained models for raindrop classification and detection
 
-1. Clone the repo.
+1. Clone the repository.
 
     ```
     $ git clone https://github.com/GTC7788/raindropDetection.git
     ```
 
-2. [Download pre-trained CNN models](https://www.dropbox.com/s/wp6wmn7nmli5e0f/Model.zip?dl=0&file_subpath=%2FModel) and put all 4 model files into the Model directory.
+2. [Download pre-trained CNN models](https://www.dropbox.com/s/wp6wmn7nmli5e0f/Model.zip?dl=0&file_subpath=%2FModel) and put all 4 model files into the **Model** directory.
 
 3. For **raindrop classification**, the script takes 1 argument indicating the image to process. For example:
     ```
@@ -104,7 +119,7 @@ python script for raindrop detection based on super pixel algorithm.
 
 
 
-## Example video:
+## Example video
 [![Examples](https://github.com/GTC7788/raindropDetection/blob/master/utils/VideoCoverSlidingWindow.jpg)](https://youtu.be/ImF6VNtrC5Y)
 
 Video Example for Raindrop Detection with Sliding Window - click image above to play.
@@ -113,7 +128,7 @@ Video Example for Raindrop Detection with Sliding Window - click image above to 
 
 Video Example for Raindrop Detection with Super Pixel - click image above to play.
 
-## Requirements:
+## Requirements
 
 **System environment and libraries requirement**
 ```$xslt
@@ -125,3 +140,20 @@ Video Example for Raindrop Detection with Super Pixel - click image above to pla
 (A installation guide for TensorFlow and TFLearn can be found at:  http://tflearn.org/installation/)
 ```
 
+## Reference
+
+[On the impact of varying region proposal strategies for raindrop detection and classification using convolutional neural networks](http://breckon.eu/toby/publications/papers/guo18raindrop.pdf)
+(Guo, Akcay, Adey and Breckon), In Proc. International Conference on Image Processing IEEE, 2018.
+```
+@InProceedings{guo18raindrop,
+  author =     {Guo, T. and Akcay, S. and Adey, P. and Breckon, T.P.},
+  title =      {On the impact of varying region proposal strategies for raindrop detection and classification using convolutional neural networks},
+  booktitle =  {Proc. International Conference on Image Processing},
+  pages =      {1-5},
+  year =       {2018},
+  month =      {September},
+  publisher =  {IEEE},
+  keywords =   {rain detection, raindrop distortion, all-weather computer vision, automotive vision, CNN},
+}
+
+```
